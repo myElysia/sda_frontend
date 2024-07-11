@@ -41,7 +41,7 @@ export default {
 
 
   axios: {
-    baseURL: 'http://localhost:8000', // Used as fallback if no runtime config is provided
+    baseURL: 'http://www.shinestar.fun:8000', // Used as fallback if no runtime config is provided
   },
 
   publicRuntimeConfig: {
@@ -83,7 +83,7 @@ export default {
           login: {url: '/api/v1/auth/auth/', method: 'post'},
           refresh: {url: '/api/v1/auth/refresh/', method: 'post'},
           user: {url: '/api/v1/auth/user/', method: 'get'},
-          logout: {url: '/api/v1/auth/logout', method: 'post'}
+          logout: {url: '/api/v1/auth/user/', method: 'get'}
         },
         // autoLogout: false
       }
@@ -92,6 +92,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: [/^element-ui/],
+    transpile: [/^element-ui/]
   }
 }
